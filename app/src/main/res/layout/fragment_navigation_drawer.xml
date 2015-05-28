@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/nav_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header">
+
+
+            <LinearLayout
+                android:id="@+id/header"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:gravity="bottom|center"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp">
+
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/userImage"
+                    app:riv_corner_radius="30dip"
+                    app:riv_border_width="1dip"
+                    app:riv_border_color="#ffffff"
+                    app:riv_oval="true"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_profile"
+                    android:scaleType="fitCenter"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Name"
+                    android:id="@+id/viewName"
+                    style="@style/texMenu"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Email"
+                    android:id="@+id/viewEmail"
+                    style="@style/texMenu"/>
+
+            </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav_header_container"
+        android:layout_marginTop="15dp" />
+
+
+</RelativeLayout>
+
